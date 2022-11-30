@@ -19,6 +19,11 @@ new Slack platformにつては、[Slack 次世代プラットフォーム機能�
 
 https://api.slack.com/future/faq#beta-reqs
 
+管理者側で利用の権限が制御されている場合は以下のドキュメントを参照してください。
+
+https://api.slack.com/future/admin
+
+
 ### User OAuth Tokenの作成
 
 https://api.slack.com/apps にアクセスして、 [`reactions:read`](https://api.slack.com/scopes/reactions:read)のscopeを持ったSlack appを作ります。
