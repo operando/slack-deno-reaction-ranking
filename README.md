@@ -8,7 +8,8 @@ new Slack platformにつては、[Slack 次世代プラットフォーム機能�
 
 ## Screenshots
 
-TODO
+<img width="500" alt="スクリーンショット 2022-12-01 0 51 53" src="https://user-images.githubusercontent.com/2127716/204845022-65923679-8e7b-4ebc-a99b-c8f71054e736.png">
+
 
 ## Setup
 
