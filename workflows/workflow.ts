@@ -1,6 +1,5 @@
 import {DefineWorkflow, Schema} from "deno-slack-sdk/mod.ts";
 import {ReactionRankingFunctionDefinition} from "../functions/reaction_ranking_function.ts";
-import SchemaTypes from "deno-slack-sdk/schema/schema_types.ts";
 
 export const Workflow = DefineWorkflow({
   callback_id: "reaction_ranking",
@@ -14,7 +13,7 @@ export const Workflow = DefineWorkflow({
         type: Schema.slack.types.channel_id,
       },
       threadTs: {
-        type: SchemaTypes.string,
+        type: Schema.types.string,
       },
     },
     required: ["userId", "channelId", "threadTs"],

@@ -1,6 +1,4 @@
 import {DefineFunction, Schema, SlackFunction} from "deno-slack-sdk/mod.ts";
-import {SlackAPI} from "deno-slack-api/mod.ts"; // Add this
-import {SLACK_API_TOKEN} from "../env.ts";
 
 export const ReactionRankingFunctionDefinition = DefineFunction({
   callback_id: "reaction_ranking_function",
@@ -27,10 +25,9 @@ export const ReactionRankingFunctionDefinition = DefineFunction({
 
 export default SlackFunction(
   ReactionRankingFunctionDefinition,
-  async ({inputs}) => {
+  async ({inputs, client}) => {
     const {userId} = inputs;
     const reactionsCount: { [key: string]: number } = {};
-    const client = SlackAPI(SLACK_API_TOKEN);
     const res = await client.reactions.list({
       limit: 1000,
       user: userId
